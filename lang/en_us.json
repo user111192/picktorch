@@ -1,3 +1,5 @@
 {
-
+    "meta.game_name": "Match Fetch Game",
+    "gui.prompt.input_total_count": "Please input the total count of matches: ",
+    "gui.error.invalid_input": "Invalid input!"
 }

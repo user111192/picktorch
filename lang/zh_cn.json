@@ -1,3 +1,5 @@
 {
-
+    "meta.game_name": "取火柴游戏",
+    "gui.prompt.input_total_count": "请输入火柴的总数量: ",
+    "gui.error.invalid_input": "输入无效，请重新输入"
 }
