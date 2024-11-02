@@ -44,6 +44,14 @@ for i in langs:
 print(len(langs),f"个语言加载完成! ({success} 个成功, {failure} 个失败)")
 
 def getTranslation(key, values=(), selectedlang = ''):
+    """
+    获取翻译
+    :param key: 键
+    :param values: 值
+    :param selectedlang: 选择的语言
+    :return: 翻译结果
+    """
+    result = None
     try:
         result = langkeys[selectedlang if selectedlang != '' else lang].get(key, langkeys[fallback_lang].get(key, key))
     except KeyError:
