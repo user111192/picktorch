@@ -14,10 +14,25 @@ def workl(list: list, func):
         try:
             func(i)
         except Exception as e:
+            e.add_note("This exception occurred when working on "+str(i))
             exceptions.append(e)
     if exceptions:
         raise ExceptionGroup("Multiple errors occurred (input:"+str(list)+")", exceptions)
 
+
+def workr(cnt, func, *wargs, **kwargs):
+    exceptions = []
+    res = []
+    for i in range(1,cnt+1):
+        try:
+            res += func(*wargs,**kwargs)
+        except* Exception as e:
+            e.add_note(f"Index: {i}/{cnt}")
+            exceptions.append(e)
+
+    if exceptions:
+        raise ExceptionGroup("Multiple errors occurred", exceptions)
+    return res
 
 def to_int(var):
     if type(var) == list:
