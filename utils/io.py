@@ -2,7 +2,7 @@
 # io.py
 import time, math, random, sys, config, json, argparse, i18n, util
 
-disableInputRepeat = True
+disableInputRepeat = False
 
 
 def input_type(type, msg=''):
