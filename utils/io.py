@@ -36,6 +36,7 @@ def input_numbers(count, type=int, minv=-math.inf, maxv=math.inf, msg=''):
         try:
             res += [input_number(type, minv, maxv, msg + " (" + str(i) + ") ")]
         except Exception as e:
+            e.add_note(f"Index: {i}/{count}")
             exceptions.append(e)
     if exceptions:
         raise ExceptionGroup("Multiple errors occurred when handling user input", exceptions)
