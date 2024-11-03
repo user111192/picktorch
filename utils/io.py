@@ -22,7 +22,7 @@ def ensure_number(num, minv=-math.inf, maxv=math.inf):
 
 
 def number_in_range(num, minv=-math.inf, maxv=math.inf):
-    return num >= minv and num <= maxv
+    return minv <= num <= maxv
 
 
 def input_number(type=int, minv=-math.inf, maxv=math.inf, msg=''):
