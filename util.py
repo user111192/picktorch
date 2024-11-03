@@ -2,7 +2,7 @@
 # util.py
 import time, math, random, sys, tqdm
 
-def workl(list: list, func):
+def workl(list: list, func, **kwargs):
     """
     Work on all elements of a list with a function.
 
@@ -12,7 +12,7 @@ def workl(list: list, func):
     exceptions = []
     for i in list:
         try:
-            func(i)
+            func(i, **kwargs)
         except Exception as e:
             e.add_note("This exception occurred when working on "+str(i))
             exceptions.append(e)
