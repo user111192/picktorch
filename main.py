@@ -9,6 +9,6 @@ try:
 except Exception as e:
     print("Game crashed!")
     e.add_note("game crashed!")
-    # traceback.print_exception(e)
     console.print_exception(extra_lines=5, show_locals=True, word_wrap=True)
+    traceback.print_exception(e)
     sys.exit(1)
